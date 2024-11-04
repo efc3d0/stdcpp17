@@ -1,3 +1,6 @@
+#ifndef __IO_H
+#define __IO_H
+
 #include <unistd.h>
 #include <sys/types.h>
 
@@ -20,3 +23,4 @@ namespace m34 {
     }
   };
 }
+#endif

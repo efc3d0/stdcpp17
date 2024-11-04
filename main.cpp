@@ -1,13 +1,19 @@
+#include <iostream>
 #include "IO.hpp"
+#include "string.hpp"
+#include "list.hpp"
 
 int
 main (void)
 {
-  m34::RWIo<char*> t;
+	m34::RWIo<char*> t;
+		
+	char* buffer = "kengg";
+	char* buffer2 = "huesos";
+	m34::Node<char*> root(buffer, m34::Node<char*>::CreateNode(buffer2));
 
-  char * buffer = new char [5];
+	std::cout << root.data << "\n"; 
+	root = root.next;
+	std::cout << root.data << "\n";
 
-  t.readIO(buffer);
-
-  t.writeIO(buffer);
 }
