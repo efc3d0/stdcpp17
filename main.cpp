@@ -9,7 +9,7 @@ main (void)
 	m34::RWIo<char*> t;
 		
 	char* buffer = "kengg";
-	char* buffer2 = "huesos";
+	char* buffer2 = "gubami";
 	m34::Node<char*> root(buffer, m34::Node<char*>::CreateNode(buffer2));
 
 	std::cout << root.data << "\n"; 
