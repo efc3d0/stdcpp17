@@ -3,7 +3,6 @@
 
 #include <sys/types.h>
 #include <unistd.h>
-
 namespace m34 {
 int strlen(const char *buffer) noexcept {
     int i = 0;
@@ -62,6 +61,6 @@ template <class T> class RWIo {
         return index;
     }
 };
-}
+} // namespace m34
 
 #endif
