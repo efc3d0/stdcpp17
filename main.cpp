@@ -1,11 +1,21 @@
+#include <iostream>
 #include "IO.hpp"
+#include "list.hpp"
+#include "vector.hpp"
+#include "string.hpp"
 
 int main(void) {
-    m34::RWIo<const char *> w;
 
-    w.writeIO("hello\n");
+	int a = 7;
+	int b = 8;
+	int c = 9;
+	m34::Node<int>* root = m34::Node<int>::CreateNode(a);
+	root->next = m34::Node<int>::CreateNode(b);
+	root->next->next = m34::Node<int>::CreateNode(c);
 
-    m34::RWIo<int> ww;
+	m34::iterators::Iterator<m34::Node<int>> beg = root->end();
 
-    w.writeIO(17);
+	auto it = *beg;
+	std::cout << it.data << "\n";
+
 }
