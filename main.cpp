@@ -1,4 +1,5 @@
 #include "list.hpp"
+#include <iostream>
 
 int main(void) {
 
@@ -9,5 +10,10 @@ int main(void) {
     root->next = m34::Node<int>::CreateNode(b);
     root->next->next = m34::Node<int>::CreateNode(c);
 
-    m34::iterators::Iterator<m34::Node<int>> beg = root->end();
+    m34::iterators::Iterator<m34::Node<int>> beg = root->begin();
+    auto it = *beg;
+
+    std::cout << it.data;
+    //std::cout << beg.pointer->data;
+    //std::cout << it << std::endl;
 }

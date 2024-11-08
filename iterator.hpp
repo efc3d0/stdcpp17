@@ -7,12 +7,13 @@ template <class T> class Iterator {
     using value_type = T;
     using pointer_type = T *;
     using reference_type = T &;
-protected:
+public:
     T *pointer;
 public:
-    Iterator(T *ptr) : pointer(ptr) {}
-protected:
-    Iterator &operator*() { return *pointer; }
+  Iterator(T *ptr) : pointer(ptr) {}
+  T operator * () noexcept {
+    return pointer->data;
+  }
 
     Iterator &operator++() {
         ++pointer;
