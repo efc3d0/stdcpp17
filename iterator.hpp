@@ -29,7 +29,6 @@ protected:
 template <class T> class BackwardIterator : protected Iterator<T> {
   public:
     BackwardIterator() { Iterator<T>(this->pointer); }
-    BackwardIterator(T *ptr) { this->pointer = ptr; }
 
     BackwardIterator &operator--() {
         --this->pointer;
