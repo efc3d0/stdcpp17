@@ -5,10 +5,7 @@
 
 namespace m34 {
 
-
-
-template <class T> 
-class Node {
+template <class T> class Node {
   public:
     T data;
     Node *next;
@@ -31,25 +28,21 @@ class Node {
         Node<T> *node = new Node<T>(data);
         return node;
     }
-	
-	iterators::Iterator<Node<T>> begin()
-	{
-		auto tmp = this;
 
-		return iterators::Iterator<Node<T>>(tmp);
-	}
+    iterators::Iterator<Node<T>> begin() {
+        auto tmp = this;
 
-	iterators::Iterator<Node<T>> end()
-	{
-		auto tmp = this;
+        return iterators::Iterator<Node<T>>(tmp);
+    }
 
-		while(tmp->next != nullptr)
-			tmp = tmp->next;
-		
-		return iterators::Iterator<Node<T>>(tmp);
-	}
+    iterators::Iterator<Node<T>> end() {
+        auto tmp = this;
 
-	
+        while (tmp->next != nullptr)
+            tmp = tmp->next;
+
+        return iterators::Iterator<Node<T>>(tmp);
+    }
 };
 } // namespace m34
 
