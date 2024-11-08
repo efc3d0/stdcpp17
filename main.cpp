@@ -1,5 +1,6 @@
 #include "list.hpp"
 #include <iostream>
+#include "fake.cpp"
 
 int main(void) {
 
@@ -15,5 +16,11 @@ int main(void) {
 
     std::cout << it.data;
     //std::cout << beg.pointer->data;
+
+    fake v;
+
+    v.f<int>(); /* m34::iterators::Iterator<T> * operator don't work with data structures    in which name of field is not 'date'
+
+pls. Check fake.cpp */
     //std::cout << it << std::endl;
 }
